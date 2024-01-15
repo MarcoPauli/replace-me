@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    background-color: blueviolet;
+    font-family: "Indie Flower", cursive;
+}
+
+#heading {
+    margin: auto;
+    width: 50%;
+    color: white;
+    text-align: center;
+}
+
+.allInpts {
+    display: block;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    font-size: large;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#inputs {
+    width: 30%;
+    padding: 10px;
+    margin: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#replaceItBtn {
+    cursor: pointer
+}
+
+#informationDiv {
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    top: 10%;
+    background-color: rgba(0, 0, 0, 0.3)
+}
+
+#showResult {
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    overflow: auto;
+}
+
+#checkboxis {
+    color: white;
+    text-align: center;
+    font-size: large;
+    margin: 10px;
+}
