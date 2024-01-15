@@ -1,7 +1,7 @@
 body {
     margin: 0;
     background-color: blueviolet;
-    font-family: 'Indie Flower', cursive;
+    font-family: Comic sans ms;
 }
 
 #heading {
@@ -31,15 +31,32 @@ body {
 }
 
 #replaceItBtn {
-    cursor: pointer
+    cursor: pointer;
+    color: white;
+    border: 2px solid blueviolet;
+    background-color: blueviolet;
+    font-weight: bold;
+}
+
+#replaceItBtn:hover {
+    background-color: whitesmoke;
+    color: blueviolet;
+    transition-duration: 1s;
 }
 
 #informationDiv {
+    position: fixed;
     width: 40%;
     text-align: center;
     margin: auto;
     top: 10%;
-    background-color: rgba(0, 0, 0, 0.3)
+    left: 10%;
+    right: 10%;
+    background-color: rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    font-size: larger;
+    padding: 10px;
+    border: 2px solid red;
 }
 
 #showResult {
