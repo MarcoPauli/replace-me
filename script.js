@@ -53,11 +53,11 @@ function showInformation(info, color) {
 
 function replaceWords() {
     if (casesensitive) {
-        alert("c")
+        //alert("c")
         userTxt = userTxt.replaceAll(oldWord, newWord);
     }
     if (!casesensitive) {
-        alert("Nc")
+        //alert("Nc")
         userTxt = userTxt.replaceAll(oldWord.toLowerCase(), newWord).replaceAll(oldWord.toUpperCase(), newWord).replaceAll(oldWord[0].toLowerCase(), newWord).replaceAll(oldWord[0].toUpperCase(), newWord);
 
     }
