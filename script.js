@@ -7,11 +7,11 @@ let casesensitive;
 
 replaceItBtn.addEventListener("click", checkValidity);
 updatedUserTxt.addEventListener("click", () => {
-    if(!(updatedUserTxt.innerHTML == "Your result")) {
+    //if(updatedUserTxt.innerHTML != "Your result") {
         navigator.clipboard.writeText(updatedUserTxt.innerHTML);
         updatedUserTxt.style.color = "grey";
         showInformation("Copied to clipboard!", "green");
-    }
+    //}
 })
 
 function checkValidity () {
