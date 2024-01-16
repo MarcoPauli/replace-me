@@ -2,10 +2,17 @@ let userTxt;
 let oldWord;
 let newWord;
 let replaceItBtn = document.getElementById("replaceItBtn");
-let updatedUserTxt;
+let updatedUserTxt = document.getElementById("updatedUserTxt");
 let casesensitive;
 
 replaceItBtn.addEventListener("click", checkValidity);
+updatedUserTxt.addEventListener("click", () => {
+    if(!(updatedUserTxt.innerHTML == "Your result")) {
+        navigator.clipboard.writeText(updatedUserTxt.innerHTML);
+        updatedUserTxt.style.color = "grey";
+        showInformation("Copied to clipboard!", "green");
+    }
+})
 
 function checkValidity () {
     userTxt = document.getElementById("userTxt").value;
@@ -43,6 +50,7 @@ function showInformation(info, color) {
     let informationDiv = document.getElementById("informationDiv");
     informationDiv.style.display = "block";
     informationDiv.style.color = color;
+    informationDiv.style.border = "2px solid " + color;
     let information = document.getElementById("information");
     information.innerHTML = info;
     setTimeout(() => {
@@ -65,5 +73,7 @@ function replaceWords() {
 }
 
 function resetElements() {
-    user
+    document.getElementById("userTxt").value = "";
+    document.getElementById("oldWord").value = "";
+    document.getElementById("newWord").value = "";
 }
