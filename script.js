@@ -6,7 +6,7 @@ let updatedUserTxt = document.getElementById("updatedUserTxt");
 let casesensitive;
 
 replaceItBtn.addEventListener("click", checkValidity);
-updatedUserTxt.addEventListener("click", () => {
+updatedUserTxt.parentNode.addEventListener("click", () => {
     //if(updatedUserTxt.innerHTML != "Your result") {
         navigator.clipboard.writeText(updatedUserTxt.innerHTML);
         updatedUserTxt.style.color = "grey";
