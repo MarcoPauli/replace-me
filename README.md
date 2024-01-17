@@ -1,2 +1,3 @@
 A simple tool which replaces words and phrases 
-Live demo: https://replce-me.netlify.app
+
+Live demo: https://replace-me.netlify.app
