@@ -1,0 +1,17 @@
+{
+    "theme_color": "blueviolet",
+    "background_color": "blueviolet",
+    "display": "fullscreen",
+    "scope": "/",
+    "start_url": "/index.html",
+    "name": "Replace-me",
+    "short_name": "Replace-me",
+    "description": "Replace 'em!",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

@@ -7,11 +7,11 @@ let casesensitive;
 
 replaceItBtn.addEventListener("click", checkValidity);
 updatedUserTxt.parentNode.addEventListener("click", () => {
-    //if(updatedUserTxt.innerHTML != "Your result") {
+    if(updatedUserTxt.innerHTML != "Your result") {
         navigator.clipboard.writeText(updatedUserTxt.innerHTML);
         updatedUserTxt.style.color = "grey";
         showInformation("Copied to clipboard!", "green");
-    //}
+    }
 })
 
 function checkValidity () {
@@ -20,7 +20,7 @@ function checkValidity () {
     newWord = document.getElementById("newWord").value;
     replaceItBtn = document.getElementById("replaceItBtn");
     updatedUserTxt = document.getElementById("updatedUserTxt");
-    casesensitive = (document.getElementById("casesensitive").checked == true) ? true : false;
+    casesensitive = (document.getElementById("casesensitive").checked) ? true : false;
     returnEverything([userTxt, oldWord, newWord, replaceItBtn, updatedUserTxt]);
     let checkText = checkTxt(userTxt);
     let checkOldWord = checkOldWrd()
@@ -42,7 +42,7 @@ function checkTxt(x) {
 }
 
 function checkOldWrd() {
-    if ((oldWord.trim() != "") && (userTxt.includes(oldWord))) return true;
+    if ((oldWord.trim() != "") && (userTxt.includes(oldWord) || userTxt.toLowerCase().includes(oldWord.toLowerCase()))) return true;
     else return false;
 }
 
@@ -61,12 +61,12 @@ function showInformation(info, color) {
 
 function replaceWords() {
     if (casesensitive) {
-        //alert("c")
+        alert("c")
         userTxt = userTxt.replaceAll(oldWord, newWord);
     }
     if (!casesensitive) {
-        //alert("Nc")
-        userTxt = userTxt.replaceAll(oldWord.toLowerCase(), newWord).replaceAll(oldWord.toUpperCase(), newWord).replaceAll(oldWord[0].toLowerCase(), newWord).replaceAll(oldWord[0].toUpperCase(), newWord);
+        alert("Nc")
+        userTxt = userTxt.toLowerCase().replaceAll(oldWord.toLowerCase(), newWord);
 
     }
     updatedUserTxt.innerHTML = userTxt;
