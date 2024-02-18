@@ -61,11 +61,9 @@ function showInformation(info, color) {
 
 function replaceWords() {
     if (casesensitive) {
-        alert("c")
         userTxt = userTxt.replaceAll(oldWord, newWord);
     }
     if (!casesensitive) {
-        alert("Nc")
         userTxt = userTxt.toLowerCase().replaceAll(oldWord.toLowerCase(), newWord);
 
     }
